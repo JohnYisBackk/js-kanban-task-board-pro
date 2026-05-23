@@ -32,7 +32,7 @@ Manage tasks with drag & drop workflow columns using pure HTML, CSS and vanilla 
 
 ## 🚀 Live Demo
 
-👉 
+👉 https://johnyisbackk.github.io/js-kanban-task-board-pro/
 
 ---
 
