@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Kanban Task Board PRO</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="app">
+      <aside class="sidebar">
+        <div>
+          <span class="logo-dot"></span>
+          <h1>Kanban Board</h1>
+          <p>Organize tasks with drag & drop workflow columns.</p>
+        </div>
+
+        <div class="board-stats">
+          <div>
+            <span id="totalTasks">0</span>
+            <p>Total Tasks</p>
+          </div>
+
+          <div>
+            <span id="doneTasks">0</span>
+            <p>Done</p>
+          </div>
+        </div>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <span class="eyebrow">Productivity Dashboard</span>
+            <h2>Task Flow</h2>
+          </div>
+
+          <form class="task-form" id="taskForm">
+            <input
+              type="text"
+              id="taskInput"
+              placeholder="Add a new task..."
+              autocomplete="off"
+            />
+
+            <select id="prioritySelect">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+
+            <button type="submit">Add Task</button>
+          </form>
+        </header>
+
+        <section class="board">
+          <div class="column" data-column="todo">
+            <div class="column-header">
+              <div>
+                <span class="column-kicker">Backlog</span>
+                <h3>Todo</h3>
+              </div>
+
+              <span
+                class="column-count"
+                id="todoCount"
+                data-column="todo"
+              ></span>
+            </div>
+
+            <div class="task-list" id="todoList" data-column="todo"></div>
+          </div>
+
+          <div class="column" data-column="progress">
+            <div class="column-header">
+              <div>
+                <span class="column-kicker">Active</span>
+                <h3>In Progress</h3>
+              </div>
+
+              <span class="column-count" id="progressCount">0</span>
+            </div>
+
+            <div
+              class="task-list"
+              id="progressList"
+              data-column="progress"
+            ></div>
+          </div>
+
+          <div class="column" data-column="done">
+            <div class="column-header">
+              <div>
+                <span class="column-kicker">Completed</span>
+                <h3>Done</h3>
+              </div>
+
+              <span class="column-count" id="doneCount">0</span>
+            </div>
+
+            <div class="task-list" id="doneList" data-column="done"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
